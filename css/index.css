@@ -1,0 +1,151 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Cairo", sans-serif;
+  background-image: url("../img/bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+ul {
+  list-style-type: none;
+}
+.container {
+  border-radius: 15px;
+  padding: 15px;
+  border: solid 1px #787878;
+  background-color: #0000003d;
+  backdrop-filter: blur(5px);
+  position: absolute;
+  right: 10%;
+  top: 10%;
+  width: 500px;
+}
+.container .cityAndDate {
+  display: flex;
+  color: white;
+  justify-content: flex-end;
+  border-bottom: 1px rgb(128, 128, 128) solid;
+  padding-bottom: 30px;
+  margin-bottom: 20px;
+}
+.container .cityAndDate h1 {
+  font-size: 25px;
+}
+.container .date {
+  direction: rtl;
+  margin-right: 50px;
+}
+.container .date p {
+  font-weight: bold;
+}
+.container .cityAndDate .city {
+  direction: rtl;
+  position: relative;
+  font-weight: bold;
+  width: 200px;
+}
+.container .cityAndDate .city h1 {
+  margin-bottom: 10px;
+}
+.container .cityAndDate .city .cities {
+  width: 100%;
+  background-color: #9a4e24;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.container .cityAndDate .city .cities .first {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5px;
+  align-items: center;
+  border-radius: 5px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border: solid 1px white;
+  cursor: pointer;
+  user-select: none;
+}
+.container .cityAndDate .city .cities .first i {
+  transition-duration: 250ms;
+}
+.container .cityAndDate .city .cities .first .selected {
+  transform: rotate(180deg);
+}
+.container .cityAndDate .city .cities .second {
+  position: absolute;
+  background-color: #9a4e24;
+  width: 100%;
+  border-radius: 5px;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+  padding: 15px;
+  user-select: none;
+  transform: scaleY(0);
+  transition-duration: 250ms;
+  transform-origin: 0 0;
+}
+.container .cityAndDate .city .cities .second.show {
+  transform: scaleY(1);
+}
+.container .cityAndDate .city .cities .second ul li {
+  cursor: pointer;
+  transition-duration: 250ms;
+}
+.container .cityAndDate .city .cities .second ul li:hover {
+  transform: translateX(-10px);
+}
+.container .prayers {
+  display: none;
+}
+.container .prayers div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  background-color: #a3623e59;
+  padding: 5px;
+  color: white;
+  border-radius: 5px;
+  border: solid 1px silver;
+}
+.container .prayers div span {
+  font-weight: bold;
+}
+.container .loading {
+  display: flex;
+  justify-content: center;
+}
+.container .loading div {
+  width: 25px;
+  height: 25px;
+  border: solid 2px white;
+  border-radius: 100px;
+  border-left: 2px solid transparent;
+  animation-name: Ammar;
+  animation-duration: 500ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes Ammar {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    width: calc(100% - 30px);
+    top: 15px;
+    right: 15px;
+  }
+}
+@media (max-width: 420px) {
+  .container .date {
+    margin-right: 30px;
+    font-size: 4vw;
+  }
+}

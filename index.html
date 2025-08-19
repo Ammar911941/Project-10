@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>web</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="cityAndDate">
+        <div class="date">
+          <h1>التاريخ</h1>
+          <p>03-09-2024</p>
+        </div>
+        <div class="city">
+          <h1>المدينة</h1>
+          <div class="cities">
+            <div class="first">
+              <p>القاهرة</p>
+              <i class="fa-solid fa-caret-down icon"></i>
+            </div>
+            <div class="second">
+              <ul>
+                <li class="Cairo default">القاهرة</li>
+                <li class="Mansoura">المنصورة</li>
+                <li class="Aswan">اسوان</li>
+                <li class="Suez">السويس</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="prayers">
+        <div class="fajr">
+          <p class="time"><span>AM</span> 5:01</p>
+          <p>: <bdi>الفجر</bdi></p>
+        </div>
+        <div class="sunrise">
+          <p class="time"><span>AM</span> 5:01</p>
+          <p>: <bdi>الشروق</bdi></p>
+        </div>
+        <div class="dhuhr">
+          <p class="time"><span>AM</span> 5:01</p>
+          <p>: <bdi>الظهر</bdi></p>
+        </div>
+        <div class="asr">
+          <p class="time"><span>PM</span> 5:01</p>
+          <p>: <bdi>العصر</bdi></p>
+        </div>
+        <div class="maghrib">
+          <p class="time"><span>PM</span> 5:01</p>
+          <p>: <bdi>المغرب</bdi></p>
+        </div>
+        <div class="isha">
+          <p class="time"><span>PM</span> 5:01</p>
+          <p>: <bdi>العشاء</bdi></p>
+        </div>
+      </div>
+      <div class="loading">
+        <div></div>
+      </div>
+    </div>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
